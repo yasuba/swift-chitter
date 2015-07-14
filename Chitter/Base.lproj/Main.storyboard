@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Chitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HxX-0F-hBW">
+                                <rect key="frame" x="260" y="58" width="80" height="30"/>
+                                <state key="normal" title="Send Tweet">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleTweetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yxq-Su-SXd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDn-Wq-CEJ">
+                                <rect key="frame" x="242" y="20" width="116" height="30"/>
+                                <state key="normal" title="Show My Tweets">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleShowMyTweetsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lyZ-09-lrC"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOo-xT-yUc">
+                                <rect key="frame" x="-19" y="96" width="638" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="YDn-Wq-CEJ" secondAttribute="centerX" id="2ft-37-4Ot"/>
+                            <constraint firstItem="vOo-xT-yUc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-35" id="3Ra-JE-PBW"/>
+                            <constraint firstItem="YDn-Wq-CEJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NQF-ev-Ycf"/>
+                            <constraint firstItem="vOo-xT-yUc" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="cd8-Nw-Ab2"/>
+                            <constraint firstItem="vOo-xT-yUc" firstAttribute="top" secondItem="HxX-0F-hBW" secondAttribute="bottom" constant="8" symbolic="YES" id="hwf-IM-591"/>
+                            <constraint firstAttribute="centerX" secondItem="YDn-Wq-CEJ" secondAttribute="centerX" id="i6a-Dy-rCW"/>
+                            <constraint firstItem="HxX-0F-hBW" firstAttribute="top" secondItem="YDn-Wq-CEJ" secondAttribute="bottom" constant="8" symbolic="YES" id="ilE-Dv-Zz7"/>
+                            <constraint firstItem="YDn-Wq-CEJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="p9r-KU-Q5d"/>
+                            <constraint firstAttribute="centerX" secondItem="HxX-0F-hBW" secondAttribute="centerX" id="sBM-JS-kEG"/>
+                            <constraint firstItem="vOo-xT-yUc" firstAttribute="centerX" secondItem="HxX-0F-hBW" secondAttribute="centerX" id="ztZ-YO-c92"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="twitterWebView" destination="vOo-xT-yUc" id="foc-OS-3LE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="317"/>
+        </scene>
+    </scenes>
+</document>
