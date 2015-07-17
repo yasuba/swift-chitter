@@ -13,7 +13,7 @@
 		AB5491131B51978F00CBE42D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB5491121B51978F00CBE42D /* Images.xcassets */; };
 		AB5491161B51978F00CBE42D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB5491141B51978F00CBE42D /* LaunchScreen.xib */; };
 		AB5491221B51978F00CBE42D /* ChitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5491211B51978F00CBE42D /* ChitterTests.swift */; };
-		AB54912C1B545F8E00CBE42D /* WebViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB54912B1B545F8E00CBE42D /* WebViewTests.swift */; };
+		ABEB946C1B56B42A00FB2B11 /* ParsedTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEB946B1B56B42A00FB2B11 /* ParsedTweet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,7 @@
 		AB54911B1B51978F00CBE42D /* ChitterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChitterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5491201B51978F00CBE42D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB5491211B51978F00CBE42D /* ChitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChitterTests.swift; sourceTree = "<group>"; };
-		AB54912B1B545F8E00CBE42D /* WebViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewTests.swift; path = ChitterTests/WebViewTests.swift; sourceTree = "<group>"; };
+		ABEB946B1B56B42A00FB2B11 /* ParsedTweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParsedTweet.swift; path = Chitter/ParsedTweet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 		AB5490FD1B51978E00CBE42D = {
 			isa = PBXGroup;
 			children = (
-				AB54912B1B545F8E00CBE42D /* WebViewTests.swift */,
+				ABEB946B1B56B42A00FB2B11 /* ParsedTweet.swift */,
 				AB5491081B51978F00CBE42D /* Chitter */,
 				AB54911E1B51978F00CBE42D /* ChitterTests */,
 				AB5491071B51978F00CBE42D /* Products */,
@@ -215,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABEB946C1B56B42A00FB2B11 /* ParsedTweet.swift in Sources */,
 				AB54910E1B51978F00CBE42D /* ViewController.swift in Sources */,
 				AB54910C1B51978F00CBE42D /* AppDelegate.swift in Sources */,
 			);
@@ -225,7 +226,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB5491221B51978F00CBE42D /* ChitterTests.swift in Sources */,
-				AB54912C1B545F8E00CBE42D /* WebViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +411,7 @@
 				AB5491271B51978F00CBE42D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB5491281B51978F00CBE42D /* Build configuration list for PBXNativeTarget "ChitterTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +420,7 @@
 				AB54912A1B51978F00CBE42D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

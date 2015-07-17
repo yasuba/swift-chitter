@@ -9,10 +9,12 @@
 import UIKit
 import Social
 
-public class ViewController: UIViewController {
+let defaultAvatarURL = NSURL(string: "https://abs.twimg.com/sticky/default_profile_images/" +
+    "default_profile_6_200x200.png")
 
-    @IBOutlet public weak var twitterWebView: UIWebView!
+public class ViewController: UITableViewController {
     
+    var parsedTweets : [ParsedTweet] = [ParsedTweet(tweetText: "iOS 8 SDK Development now in print. " + "Swift programming FTW!", userName: "@yasuba", createdAt: "2015-07-17 10:09:30", userAvatarURL: defaultAvatarURL), ParsedTweet(tweetText: "HEllo", userName: "@yasuba", createdAt: "2015-07-17 10:09:30", userAvatarURL: defaultAvatarURL), ParsedTweet(tweetText: "Third tweet", userName: "@yasuba", createdAt: "2015-07-17 10:09:30", userAvatarURL: defaultAvatarURL)]
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -25,23 +27,23 @@ public class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func handleShowMyTweetsTapped(sender: UIButton) {
-        loadTwitterPage()
+    public func loadTwitterPage() {
+
+
     }
     
-    func loadTwitterPage() {
-        twitterWebView.loadRequest(NSURLRequest (URL: NSURL (string: "http://www.twitter.com/yasuba")!))
-
+    override public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+            return 1
     }
 
-    @IBAction func handleTweetButtonTapped(sender: UIButton) {
-        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
-            let tweetVC = SLComposeViewController (forServiceType: SLServiceTypeTwitter)
-            tweetVC.setInitialText("I just finished the first project in iOS 8 SDK Development. #pragsios8")
-            presentViewController(tweetVC, animated: true, completion: nil)
-        } else {
-            println("Can't send tweet")
-        }
+    override public func tableView(_tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return parsedTweets.count
+    }
+    override public func tableView (_tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+            let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
+            let parsedTweet = parsedTweets[indexPath.row]
+            cell.textLabel?.text = parsedTweet.tweetText
+            return cell
     }
 }
 
