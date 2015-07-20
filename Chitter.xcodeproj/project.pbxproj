@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB469A4B1B5D995E00A6B83A /* ParsedTweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB469A4A1B5D995E00A6B83A /* ParsedTweetCell.swift */; };
 		AB54910C1B51978F00CBE42D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB54910B1B51978F00CBE42D /* AppDelegate.swift */; };
 		AB54910E1B51978F00CBE42D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB54910D1B51978F00CBE42D /* ViewController.swift */; };
 		AB5491111B51978F00CBE42D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB54910F1B51978F00CBE42D /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB469A4A1B5D995E00A6B83A /* ParsedTweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedTweetCell.swift; sourceTree = "<group>"; };
 		AB5491061B51978F00CBE42D /* Chitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB54910A1B51978F00CBE42D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB54910B1B51978F00CBE42D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		AB5490FD1B51978E00CBE42D = {
 			isa = PBXGroup;
 			children = (
+				AB469A4A1B5D995E00A6B83A /* ParsedTweetCell.swift */,
 				ABEB946B1B56B42A00FB2B11 /* ParsedTweet.swift */,
 				AB5491081B51978F00CBE42D /* Chitter */,
 				AB54911E1B51978F00CBE42D /* ChitterTests */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB469A4B1B5D995E00A6B83A /* ParsedTweetCell.swift in Sources */,
 				ABEB946C1B56B42A00FB2B11 /* ParsedTweet.swift in Sources */,
 				AB54910E1B51978F00CBE42D /* ViewController.swift in Sources */,
 				AB54910C1B51978F00CBE42D /* AppDelegate.swift in Sources */,
